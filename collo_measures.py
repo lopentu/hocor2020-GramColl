@@ -1,9 +1,18 @@
 from math import log2, log, sqrt
+from scipy.stats import fisher_exact
 
 def cca(freq_table):
     """
     Covarying Collexeme Analysis
     freq_table: dict. Format: {(Slot1, Slot2): freq, (Slot1, Slot2): freq, ...}
+    
+    Contingency table:
+                    L_slot1     ~L_slot1
+        L_slot2       o11          o12
+        ~L_slot2      o21          o22
+
+    References:
+        Desagulier, G. (2017). Corpus Linguistics and Statistics with R. p213-221.
     """
 
     # Get total size
@@ -55,10 +64,14 @@ def dca(freq_table):
     """
     Distinctive Collexeme Analysis
     freq_table: dict. Format: {C1: {L1: freq, L2: freq, ...}, C2: {L1: freq, L2: freq, ...}}
-    
-         Lj     ~Lj
-    C1   o11    o12
-    C2   o21    o22
+
+    Contingency table:
+             Lj     ~Lj
+        C1   o11    o12
+        C2   o21    o22
+
+    References:
+        Desagulier, G. (2017). Corpus Linguistics and Statistics with R. p213-221.
     """
     cnst_keys = list(freq_table.keys())
     C1 = cnst_keys[0]
@@ -91,6 +104,8 @@ def dca(freq_table):
 
 def measures(o11, o12, o21, o22):
     """
+    Compute a list of association measures from the contingency table.
+
     G2: 3.8415 (p < 0.05); 10.8276 (p < 0.01)
     """
 
@@ -98,6 +113,8 @@ def measures(o11, o12, o21, o22):
     o2_ = o21 + o22
     o_1 = o11 + o21
     o_2 = o12 + o22
+    _, fisher_exact_pvalue = fisher_exact([[o11, o12], [o21, o22]])
+    fisher_attract = -log(fisher_exact_pvalue)
 
     total = o1_ + o2_
     e11 = o1_ * o_1 / total
@@ -105,6 +122,8 @@ def measures(o11, o12, o21, o22):
     e21 = o2_ * o_1 / total
     e22 = o2_ * o_2 / total
     
+    # Compute G2
+    if o11 == 0: o11 = 0.00000000001
     try:
         t11 = o11*log(o11/e11) if o11 != 0 else 0
         t12 = o12*log(o12/e12) if o12 != 0 else 0
@@ -114,11 +133,13 @@ def measures(o11, o12, o21, o22):
         print(o11, o12, o21, o22, e11, e12, e21, e22)
         raise Exception('math error')
     G2 = 2 * (t11 + t12 + t21 + t22)
-    if o11 < e11: G2 = -G2
+    if o11 < e11: 
+        G2 = -G2
+        fisher_attract = -fisher_attract
 
-    if o11 == 0: o11 = 0.00000000001
     return {
         'freq': o11,
+        'fisher_exact': fisher_attract,
         "G2": G2,
         'MI': log2(o11/e11),
         'MI3': log2(o11 ** 3 / e11),

@@ -1,5 +1,7 @@
 import json
 import requests
+import time
+
 
 
 def search(pattern=None, cql_enable=True, board=None, year_from=None, year_to=None, author=None, number=20, wordsaroundhit=0):
@@ -27,7 +29,7 @@ def search(pattern=None, cql_enable=True, board=None, year_from=None, year_to=No
         filter_string = " AND ".join(filters) + "&"
     
     # Pagination
-    num_per_page = 3000
+    num_per_page = 100
     num_of_pages = int(number // num_per_page + 0.01) + 1
     params = {
             'outputformat': 'json',
@@ -39,23 +41,33 @@ def search(pattern=None, cql_enable=True, board=None, year_from=None, year_to=No
             'number': num_per_page
         }
 
+    requested_urls = []
     hits = []
     for i in range(num_of_pages):
         # Last page
         if i == num_of_pages - 1:
             params['number'] = number % num_per_page
         
-        response = requests.get(f'{PTT_BLACKLAB_API}/indexes/hits', params=params)
-        print(response.url)
+        response = requests.get(f'{PTT_BLACKLAB_API}/indexes/hits/', params=params)
+        #print(response.url)
+        requested_urls.append(response.url)
         text = json.loads(response.text)
         if i == 0:
             num_of_results_found = text.get("summary").get("numberOfHits")
-            print(f'  Found {num_of_results_found} results')
+            print(f'Found {num_of_results_found} results')
         if num_of_results_found <= len(hits): break
+        if text.get("hits") is None: break
         hits += text.get("hits")
         params['first'] += num_per_page
 
-    return hits
+        #time.sleep(0.035)
+
+    return hits, requested_urls
+
+
+
+def quote_params(params: dict):
+    return '&'.join(f"{requests.utils.quote(k)}={requests.utils.quote(str(v))}" for k, v in params.items())
 
 
 def get_capture_groups(hit, pos_tags=False):
