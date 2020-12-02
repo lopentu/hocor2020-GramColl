@@ -1,12 +1,32 @@
 from math import log2, log, sqrt
 from scipy.stats import fisher_exact
 
+
 def cca(freq_table):
     """
     Covarying Collexeme Analysis
-    freq_table: dict. Format: {(Slot1, Slot2): freq, (Slot1, Slot2): freq, ...}
-    
-    Contingency table:
+
+    Parameters
+    ----------
+    freq_table : dict 
+        A frequency table in the format of: 
+            {
+                (Slot1, Slot2): freq, 
+                (Slot1, Slot2): freq, 
+                ...
+            }
+        where Slot1 & Slot2 are lexical items in a same construction.
+
+    Returns
+    -------
+    dict
+        A dictionary with a pair of lexical items as keys and a dicionary of 
+        association measures (returned by measure()) indicating the
+        strength of attraction of the two lexical items.
+
+    Notes
+    -----
+    The contingency table used in Covarying Collexeme Analysis:
                     L_slot1     ~L_slot1
         L_slot2       o11          o12
         ~L_slot2      o21          o22
@@ -63,9 +83,28 @@ def cca(freq_table):
 def dca(freq_table):
     """
     Distinctive Collexeme Analysis
-    freq_table: dict. Format: {C1: {L1: freq, L2: freq, ...}, C2: {L1: freq, L2: freq, ...}}
 
-    Contingency table:
+    Parameters
+    ----------
+    freq_table : dict 
+        A frequency table in the format of: 
+            {
+                C1: {L1: freq, L2: freq, ...}, 
+                C2: {L1: freq, L2: freq, ...}
+            }
+        where C1 & C2 are labels for construction types and 
+        L1, L2, L3, ... are labels for word types.
+
+    Returns
+    -------
+    dict
+        A dictionary with lexical items as keys and a dicionary of 
+        association measures (returned by measure()) indicating the
+        strength of attraction of the lexical item to the two constructions.
+
+    Notes
+    -----
+    The contingency table used in Distinctive Collexeme Analysis:
              Lj     ~Lj
         C1   o11    o12
         C2   o21    o22
@@ -103,10 +142,27 @@ def dca(freq_table):
 
 
 def measures(o11, o12, o21, o22):
-    """
-    Compute a list of association measures from the contingency table.
+    """Compute a list of association measures from the contingency table.
 
-    G2: 3.8415 (p < 0.05); 10.8276 (p < 0.01)
+    Parameters
+    ----------
+    o11 : int
+        Cell(1, 1) in a 2x2 contingency table.
+    o12 : int
+        Cell(1, 2) in a 2x2 contingency table.
+    o21 : int
+        Cell(2, 1) in a 2x2 contingency table.
+    o22 : int
+        Cell(2, 2) in a 2x2 contingency table.
+
+    Returns
+    -------
+    dict
+        A list of association strengths as measured by different stats.
+
+    Notes
+    -----
+    G2 stat significance levels: 3.8415 (p < 0.05); 10.8276 (p < 0.01)
     """
 
     o1_ = o11 + o12
@@ -151,12 +207,29 @@ def measures(o11, o12, o21, o22):
     }
 
 
-def rank_collo(collo_measures, nodeword=None, nodeword_idx=0, sort_by='G2', reverse=True, freq_cutoff=None):
-    if freq_cutoff is None: freq_cutoff = 0
+
+def rank_collo(collo_measures, nodeword=None, nodeword_idx=0, sort_by='G2', reverse=True, freq_cutoff=1):
+    """Helper function to sort the results of collostructional analyses as returned by dca() and cca().
+
+    Parameters
+    ----------
+    collo_measures : dict
+        The analysis results returned by dca() or cca()
+    sort_by : str, optional
+        The association measure used to sort the result, by default 'G2'. 
+        See measure() for the list of possible assoiciation measures to use for sorting.
+    reverse : bool, optional
+        Whether to sort from high values to low ones, by default True
+    freq_cutoff : int, optional
+        The minimal number of occurrences required to be included in the
+        results, by default 1
+
+    Returns
+    -------
+    [type]
+        [description]
+    """
     out = sorted( ((k, v[sort_by], v['freq']) for k, v in collo_measures.items() if v['freq'] >= freq_cutoff),
     key=lambda x: x[1], reverse=reverse)
 
-    if nodeword:
-        return [ x for x in out if x[0][nodeword_idx] == nodeword.strip() ]
-    else:
-        return out
+    return out
