@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module APIsearch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>APIsearch</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/liao/Desktop/corp-workshop/docs/APIsearch.py">/home/liao/Desktop/corp-workshop/docs/APIsearch.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-get_capture_groups"><strong>get_capture_groups</strong></a>(hit, pos_tags=False)</dt><dd><tt>Get&nbsp;CQL&nbsp;labeled&nbsp;groups&nbsp;from&nbsp;a&nbsp;search&nbsp;result<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+hit&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;returned&nbsp;data&nbsp;of&nbsp;the&nbsp;BlackLab&nbsp;api,&nbsp;see&nbsp;<a href="#-search">search</a>().<br>
+pos_tags&nbsp;:&nbsp;bool,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;include&nbsp;PoS&nbsp;tags&nbsp;in&nbsp;the&nbsp;returned&nbsp;data,&nbsp;by&nbsp;default&nbsp;False,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;which&nbsp;only&nbsp;includes&nbsp;word&nbsp;forms.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;keys&nbsp;matching&nbsp;the&nbsp;CQL&nbsp;labeled&nbsp;group&nbsp;name&nbsp;and&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;values&nbsp;the&nbsp;corresponding&nbsp;captured&nbsp;keywords&nbsp;captured&nbsp;in&nbsp;a&nbsp;CQL&nbsp;named&nbsp;group.</tt></dd></dl>
+ <dl><dt><a name="-search"><strong>search</strong></a>(pattern, cql_enable=True, board=None, year_from=None, year_to=None, number=20, wordsaroundhit=0, chunk_size=500, get_meta=False)</dt><dd><tt>Wrapper&nbsp;function&nbsp;to&nbsp;query&nbsp;BlackLab&nbsp;API<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+pattern&nbsp;:&nbsp;str,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Pattern&nbsp;to&nbsp;search&nbsp;for<br>
+cql_enable&nbsp;:&nbsp;bool,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;`pattern`&nbsp;is&nbsp;written&nbsp;in&nbsp;CQL,&nbsp;by&nbsp;default&nbsp;True<br>
+board&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Limit&nbsp;search&nbsp;to&nbsp;a&nbsp;particular&nbsp;board,&nbsp;by&nbsp;default&nbsp;None<br>
+year_from&nbsp;:&nbsp;int,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Limit&nbsp;search&nbsp;to&nbsp;dates&nbsp;after&nbsp;`yyyy-01-01`,&nbsp;where&nbsp;yyyy&nbsp;equals&nbsp;`year_from`,&nbsp;by&nbsp;default&nbsp;None<br>
+year_to&nbsp;:&nbsp;int,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Limit&nbsp;search&nbsp;to&nbsp;dates&nbsp;before&nbsp;`yyyy-12-31`,&nbsp;where&nbsp;yyyy&nbsp;equals&nbsp;`year_from`,&nbsp;by&nbsp;default&nbsp;None<br>
+number&nbsp;:&nbsp;int,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;results&nbsp;to&nbsp;return,&nbsp;by&nbsp;default&nbsp;20.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;None,&nbsp;returns&nbsp;all&nbsp;matching&nbsp;results&nbsp;in&nbsp;from&nbsp;the&nbsp;corpus&nbsp;(BECAREFUL,&nbsp;this&nbsp;place&nbsp;a&nbsp;heavy&nbsp;load<br>
+&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;the&nbsp;BlackLab&nbsp;server&nbsp;if&nbsp;there&nbsp;is&nbsp;a&nbsp;large&nbsp;number&nbsp;of&nbsp;matching&nbsp;results).<br>
+wordsaroundhit&nbsp;:&nbsp;int,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;number&nbsp;of&nbsp;tokens&nbsp;around&nbsp;the&nbsp;keywords&nbsp;to&nbsp;return,&nbsp;by&nbsp;default&nbsp;0<br>
+chunk_size&nbsp;:&nbsp;int,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;results&nbsp;to&nbsp;return&nbsp;for&nbsp;each&nbsp;iteration&nbsp;of&nbsp;query,&nbsp;by&nbsp;default&nbsp;500<br>
+get_meta&nbsp;:&nbsp;bool,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;return&nbsp;meta&nbsp;data,&nbsp;by&nbsp;default&nbsp;False<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+tuple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;get_meta&nbsp;is&nbsp;False,&nbsp;returns&nbsp;a&nbsp;tuple&nbsp;of&nbsp;length&nbsp;two:&nbsp;(hits,&nbsp;requested_urls).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;get_meta&nbsp;is&nbsp;True,&nbsp;returns&nbsp;a&nbsp;tuple&nbsp;of&nbsp;length&nbsp;three:&nbsp;(hits,&nbsp;metadata,&nbsp;requested_urls).</tt></dd></dl>
+ <dl><dt><a name="-top_n"><strong>top_n</strong></a>(freq_table:dict, n=25)</dt></dl>
+</td></tr></table>
+</body></html>

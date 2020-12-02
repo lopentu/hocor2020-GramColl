@@ -1,6 +1,5 @@
-from math import log2, log, sqrt
+import math
 from scipy.stats import fisher_exact
-
 
 def cca(freq_table):
     """
@@ -159,6 +158,7 @@ def measures(o11, o12, o21, o22):
     -------
     dict
         A list of association strengths as measured by different stats.
+        For Fisher's exact test, see scipy.stats.fisher_exact()
 
     Notes
     -----
@@ -170,7 +170,7 @@ def measures(o11, o12, o21, o22):
     o_1 = o11 + o21
     o_2 = o12 + o22
     _, fisher_exact_pvalue = fisher_exact([[o11, o12], [o21, o22]])
-    fisher_attract = -log(fisher_exact_pvalue)
+    fisher_attract = -math.log(fisher_exact_pvalue)
 
     total = o1_ + o2_
     e11 = o1_ * o_1 / total
@@ -181,10 +181,10 @@ def measures(o11, o12, o21, o22):
     # Compute G2
     if o11 == 0: o11 = 0.00000000001
     try:
-        t11 = o11*log(o11/e11) if o11 != 0 else 0
-        t12 = o12*log(o12/e12) if o12 != 0 else 0
-        t21 = o21*log(o21/e21) if o21 != 0 else 0
-        t22 = o22*log(o22/e22) if o22 != 0 else 0
+        t11 = o11*math.log(o11/e11) if o11 != 0 else 0
+        t12 = o12*math.log(o12/e12) if o12 != 0 else 0
+        t21 = o21*math.log(o21/e21) if o21 != 0 else 0
+        t22 = o22*math.log(o22/e22) if o22 != 0 else 0
     except:
         print(o11, o12, o21, o22, e11, e12, e21, e22)
         raise Exception('math error')
@@ -197,10 +197,10 @@ def measures(o11, o12, o21, o22):
         'freq': o11,
         'fisher_exact': fisher_attract,
         "G2": G2,
-        'MI': log2(o11/e11),
-        'MI3': log2(o11 ** 3 / e11),
-        'MI_logf': log2(o11/e11) * log(o11 + 1),
-        't': (o11 - e11) / sqrt(e11),
+        'MI': math.log2(o11/e11),
+        'MI3': math.log2(o11 ** 3 / e11),
+        'MI_logf': math.log2(o11/e11) * math.log(o11 + 1),
+        't': (o11 - e11) / math.sqrt(e11),
         'Dice': 2 * e11 / (o1_ + o_1),
         "deltaP21": o11/o1_ - o21/o2_,
         "deltaP12": o11/o_1 - o21/o_2
@@ -226,8 +226,9 @@ def rank_collo(collo_measures, nodeword=None, nodeword_idx=0, sort_by='G2', reve
 
     Returns
     -------
-    [type]
-        [description]
+    list
+        A list of tuple of length three, with the second element being
+        the association statistic used for sorting and the third element the frequency.
     """
     out = sorted( ((k, v[sort_by], v['freq']) for k, v in collo_measures.items() if v['freq'] >= freq_cutoff),
     key=lambda x: x[1], reverse=reverse)

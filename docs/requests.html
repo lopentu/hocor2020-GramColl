@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: package requests</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>requests</strong></big></big> (version 2.19.1)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/liao/.local/lib/python3.6/site-packages/requests/__init__.py">/home/liao/.local/lib/python3.6/site-packages/requests/__init__.py</a></font></td></tr></table>
+    <p><tt>Requests&nbsp;HTTP&nbsp;Library<br>
+~~~~~~~~~~~~~~~~~~~~~<br>
+&nbsp;<br>
+Requests&nbsp;is&nbsp;an&nbsp;HTTP&nbsp;library,&nbsp;written&nbsp;in&nbsp;Python,&nbsp;for&nbsp;human&nbsp;beings.&nbsp;Basic&nbsp;GET<br>
+usage:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;import&nbsp;requests<br>
+&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;r&nbsp;=&nbsp;requests.get('https://www.python.org')<br>
+&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;r.status_code<br>
+&nbsp;&nbsp;&nbsp;200<br>
+&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;'Python&nbsp;is&nbsp;a&nbsp;programming&nbsp;language'&nbsp;in&nbsp;r.content<br>
+&nbsp;&nbsp;&nbsp;True<br>
+&nbsp;<br>
+...&nbsp;or&nbsp;POST:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;payload&nbsp;=&nbsp;dict(key1='value1',&nbsp;key2='value2')<br>
+&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;r&nbsp;=&nbsp;requests.post('<a href="http://httpbin.org/post">http://httpbin.org/post</a>',&nbsp;data=payload)<br>
+&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;print(r.text)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"form":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"key2":&nbsp;"value2",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"key1":&nbsp;"value1"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;<br>
+The&nbsp;other&nbsp;HTTP&nbsp;methods&nbsp;are&nbsp;supported&nbsp;-&nbsp;see&nbsp;`requests.api`.&nbsp;Full&nbsp;documentation<br>
+is&nbsp;at&nbsp;&lt;<a href="http://python-requests.org">http://python-requests.org</a>&gt;.<br>
+&nbsp;<br>
+:copyright:&nbsp;(c)&nbsp;2017&nbsp;by&nbsp;Kenneth&nbsp;Reitz.<br>
+:license:&nbsp;Apache&nbsp;2.0,&nbsp;see&nbsp;LICENSE&nbsp;for&nbsp;more&nbsp;details.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Package Contents</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="requests.__version__.html">__version__</a><br>
+<a href="requests._internal_utils.html">_internal_utils</a><br>
+<a href="requests.adapters.html">adapters</a><br>
+<a href="requests.api.html">api</a><br>
+<a href="requests.auth.html">auth</a><br>
+</td><td width="25%" valign=top><a href="requests.certs.html">certs</a><br>
+<a href="requests.compat.html">compat</a><br>
+<a href="requests.cookies.html">cookies</a><br>
+<a href="requests.exceptions.html">exceptions</a><br>
+<a href="requests.help.html">help</a><br>
+</td><td width="25%" valign=top><a href="requests.hooks.html">hooks</a><br>
+<a href="requests.models.html">models</a><br>
+<a href="requests.packages.html">packages</a><br>
+<a href="requests.sessions.html">sessions</a><br>
+<a href="requests.status_codes.html">status_codes</a><br>
+</td><td width="25%" valign=top><a href="requests.structures.html">structures</a><br>
+<a href="requests.utils.html">utils</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-check_compatibility"><strong>check_compatibility</strong></a>(urllib3_version, chardet_version)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__author_email__</strong> = 'me@kennethreitz.org'<br>
+<strong>__build__</strong> = 137473<br>
+<strong>__cake__</strong> = '✨ 🍰 ✨'<br>
+<strong>__copyright__</strong> = 'Copyright 2018 Kenneth Reitz'<br>
+<strong>__description__</strong> = 'Python HTTP for Humans.'<br>
+<strong>__license__</strong> = 'Apache 2.0'<br>
+<strong>__title__</strong> = 'requests'<br>
+<strong>__url__</strong> = 'http://python-requests.org'<br>
+<strong>codes</strong> = &lt;lookup 'status_codes'&gt;<br>
+<strong>cryptography_version</strong> = '2.3.1'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Kenneth&nbsp;Reitz</td></tr></table>
+</body></html>

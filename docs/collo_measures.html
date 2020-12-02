@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module collo_measures</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>collo_measures</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/liao/Desktop/corp-workshop/docs/collo_measures.py">/home/liao/Desktop/corp-workshop/docs/collo_measures.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-cca"><strong>cca</strong></a>(freq_table)</dt><dd><tt>Covarying&nbsp;Collexeme&nbsp;Analysis<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+freq_table&nbsp;:&nbsp;dict&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;frequency&nbsp;table&nbsp;in&nbsp;the&nbsp;format&nbsp;of:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Slot1,&nbsp;Slot2):&nbsp;freq,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Slot1,&nbsp;Slot2):&nbsp;freq,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;Slot1&nbsp;&amp;&nbsp;Slot2&nbsp;are&nbsp;lexical&nbsp;items&nbsp;in&nbsp;a&nbsp;same&nbsp;construction.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;a&nbsp;pair&nbsp;of&nbsp;lexical&nbsp;items&nbsp;as&nbsp;keys&nbsp;and&nbsp;a&nbsp;dicionary&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;association&nbsp;measures&nbsp;(returned&nbsp;by&nbsp;measure())&nbsp;indicating&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;strength&nbsp;of&nbsp;attraction&nbsp;of&nbsp;the&nbsp;two&nbsp;lexical&nbsp;items.<br>
+&nbsp;<br>
+Notes<br>
+-----<br>
+The&nbsp;contingency&nbsp;table&nbsp;used&nbsp;in&nbsp;Covarying&nbsp;Collexeme&nbsp;Analysis:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_slot1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~L_slot1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;L_slot2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o12<br>
+&nbsp;&nbsp;&nbsp;&nbsp;~L_slot2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o22<br>
+&nbsp;<br>
+References:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Desagulier,&nbsp;G.&nbsp;(2017).&nbsp;Corpus&nbsp;Linguistics&nbsp;and&nbsp;Statistics&nbsp;with&nbsp;R.&nbsp;p213-221.</tt></dd></dl>
+ <dl><dt><a name="-dca"><strong>dca</strong></a>(freq_table)</dt><dd><tt>Distinctive&nbsp;Collexeme&nbsp;Analysis<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+freq_table&nbsp;:&nbsp;dict&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;frequency&nbsp;table&nbsp;in&nbsp;the&nbsp;format&nbsp;of:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C1:&nbsp;{L1:&nbsp;freq,&nbsp;L2:&nbsp;freq,&nbsp;...},&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C2:&nbsp;{L1:&nbsp;freq,&nbsp;L2:&nbsp;freq,&nbsp;...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;C1&nbsp;&amp;&nbsp;C2&nbsp;are&nbsp;labels&nbsp;for&nbsp;construction&nbsp;types&nbsp;and&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;L1,&nbsp;L2,&nbsp;L3,&nbsp;...&nbsp;are&nbsp;labels&nbsp;for&nbsp;word&nbsp;types.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;lexical&nbsp;items&nbsp;as&nbsp;keys&nbsp;and&nbsp;a&nbsp;dicionary&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;association&nbsp;measures&nbsp;(returned&nbsp;by&nbsp;measure())&nbsp;indicating&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;strength&nbsp;of&nbsp;attraction&nbsp;of&nbsp;the&nbsp;lexical&nbsp;item&nbsp;to&nbsp;the&nbsp;two&nbsp;constructions.<br>
+&nbsp;<br>
+Notes<br>
+-----<br>
+The&nbsp;contingency&nbsp;table&nbsp;used&nbsp;in&nbsp;Distinctive&nbsp;Collexeme&nbsp;Analysis:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lj&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~Lj<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C1&nbsp;&nbsp;&nbsp;o11&nbsp;&nbsp;&nbsp;&nbsp;o12<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C2&nbsp;&nbsp;&nbsp;o21&nbsp;&nbsp;&nbsp;&nbsp;o22<br>
+&nbsp;<br>
+References:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Desagulier,&nbsp;G.&nbsp;(2017).&nbsp;Corpus&nbsp;Linguistics&nbsp;and&nbsp;Statistics&nbsp;with&nbsp;R.&nbsp;p213-221.</tt></dd></dl>
+ <dl><dt><a name="-measures"><strong>measures</strong></a>(o11, o12, o21, o22)</dt><dd><tt>Compute&nbsp;a&nbsp;list&nbsp;of&nbsp;association&nbsp;measures&nbsp;from&nbsp;the&nbsp;contingency&nbsp;table.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+o11&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Cell(1,&nbsp;1)&nbsp;in&nbsp;a&nbsp;2x2&nbsp;contingency&nbsp;table.<br>
+o12&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Cell(1,&nbsp;2)&nbsp;in&nbsp;a&nbsp;2x2&nbsp;contingency&nbsp;table.<br>
+o21&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Cell(2,&nbsp;1)&nbsp;in&nbsp;a&nbsp;2x2&nbsp;contingency&nbsp;table.<br>
+o22&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Cell(2,&nbsp;2)&nbsp;in&nbsp;a&nbsp;2x2&nbsp;contingency&nbsp;table.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;association&nbsp;strengths&nbsp;as&nbsp;measured&nbsp;by&nbsp;different&nbsp;stats.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;For&nbsp;Fisher's&nbsp;exact&nbsp;test,&nbsp;see&nbsp;scipy.stats.fisher_exact()<br>
+&nbsp;<br>
+Notes<br>
+-----<br>
+G2&nbsp;stat&nbsp;significance&nbsp;levels:&nbsp;3.8415&nbsp;(p&nbsp;&lt;&nbsp;0.05);&nbsp;10.8276&nbsp;(p&nbsp;&lt;&nbsp;0.01)</tt></dd></dl>
+ <dl><dt><a name="-rank_collo"><strong>rank_collo</strong></a>(collo_measures, nodeword=None, nodeword_idx=0, sort_by='G2', reverse=True, freq_cutoff=1)</dt><dd><tt>Helper&nbsp;function&nbsp;to&nbsp;sort&nbsp;the&nbsp;results&nbsp;of&nbsp;collostructional&nbsp;analyses&nbsp;as&nbsp;returned&nbsp;by&nbsp;<a href="#-dca">dca</a>()&nbsp;and&nbsp;<a href="#-cca">cca</a>().<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+collo_measures&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;analysis&nbsp;results&nbsp;returned&nbsp;by&nbsp;<a href="#-dca">dca</a>()&nbsp;or&nbsp;<a href="#-cca">cca</a>()<br>
+sort_by&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;association&nbsp;measure&nbsp;used&nbsp;to&nbsp;sort&nbsp;the&nbsp;result,&nbsp;by&nbsp;default&nbsp;'G2'.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;See&nbsp;measure()&nbsp;for&nbsp;the&nbsp;list&nbsp;of&nbsp;possible&nbsp;assoiciation&nbsp;measures&nbsp;to&nbsp;use&nbsp;for&nbsp;sorting.<br>
+reverse&nbsp;:&nbsp;bool,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;sort&nbsp;from&nbsp;high&nbsp;values&nbsp;to&nbsp;low&nbsp;ones,&nbsp;by&nbsp;default&nbsp;True<br>
+freq_cutoff&nbsp;:&nbsp;int,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;minimal&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;required&nbsp;to&nbsp;be&nbsp;included&nbsp;in&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;results,&nbsp;by&nbsp;default&nbsp;1<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;tuple&nbsp;of&nbsp;length&nbsp;three,&nbsp;with&nbsp;the&nbsp;second&nbsp;element&nbsp;being<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;association&nbsp;statistic&nbsp;used&nbsp;for&nbsp;sorting&nbsp;and&nbsp;the&nbsp;third&nbsp;element&nbsp;the&nbsp;frequency.</tt></dd></dl>
+</td></tr></table>
+</body></html>
