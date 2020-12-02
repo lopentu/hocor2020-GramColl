@@ -18,4 +18,4 @@ pip install -r requirements
 
 ### 操作
 
-開啟 `collostructional_analysis_with_CQL.ipynb` 即可執行。相關函數寫在 `APIsearch.py` 與 `collo_measures.py`。
+開啟 `collostructional_analysis.ipynb` 即可執行。相關函數寫在 `APIsearch.py` 與 `collo_measures.py`。
