@@ -208,7 +208,7 @@ def measures(o11, o12, o21, o22):
 
 
 
-def rank_collo(collo_measures, nodeword=None, nodeword_idx=0, sort_by='G2', reverse=True, freq_cutoff=1):
+def rank_collo(collo_measures, sort_by='G2', reverse=True, freq_cutoff=1):
     """Helper function to sort the results of collostructional analyses as returned by dca() and cca().
 
     Parameters

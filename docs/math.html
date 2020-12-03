@@ -9,8 +9,8 @@
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>math</strong></big></big></font></td
 ><td align=right valign=bottom
 ><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br>(built-in)</font></td></tr></table>
-    <p><tt>This&nbsp;module&nbsp;is&nbsp;always&nbsp;available.&nbsp;&nbsp;It&nbsp;provides&nbsp;access&nbsp;to&nbsp;the<br>
-mathematical&nbsp;functions&nbsp;defined&nbsp;by&nbsp;the&nbsp;C&nbsp;standard.</tt></p>
+    <p><tt>This&nbsp;module&nbsp;provides&nbsp;access&nbsp;to&nbsp;the&nbsp;mathematical&nbsp;functions<br>
+defined&nbsp;by&nbsp;the&nbsp;C&nbsp;standard.</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#eeaa77">
@@ -18,99 +18,90 @@ mathematical&nbsp;functions&nbsp;defined&nbsp;by&nbsp;the&nbsp;C&nbsp;standard.<
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
     
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-acos"><strong>acos</strong></a>(...)</dt><dd><tt><a href="#-acos">acos</a>(x)<br>
+<td width="100%"><dl><dt><a name="-acos"><strong>acos</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;arc&nbsp;cosine&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-acosh"><strong>acosh</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;inverse&nbsp;hyperbolic&nbsp;cosine&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-asin"><strong>asin</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;arc&nbsp;sine&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-asinh"><strong>asinh</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;inverse&nbsp;hyperbolic&nbsp;sine&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-atan"><strong>atan</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;arc&nbsp;tangent&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-atan2"><strong>atan2</strong></a>(y, x, /)</dt><dd><tt>Return&nbsp;the&nbsp;arc&nbsp;tangent&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;y/x.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;arc&nbsp;cosine&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-acosh"><strong>acosh</strong></a>(...)</dt><dd><tt><a href="#-acosh">acosh</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;inverse&nbsp;hyperbolic&nbsp;cosine&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-asin"><strong>asin</strong></a>(...)</dt><dd><tt><a href="#-asin">asin</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;arc&nbsp;sine&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-asinh"><strong>asinh</strong></a>(...)</dt><dd><tt><a href="#-asinh">asinh</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;inverse&nbsp;hyperbolic&nbsp;sine&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-atan"><strong>atan</strong></a>(...)</dt><dd><tt><a href="#-atan">atan</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;arc&nbsp;tangent&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-atan2"><strong>atan2</strong></a>(...)</dt><dd><tt><a href="#-atan2">atan2</a>(y,&nbsp;x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;arc&nbsp;tangent&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;y/x.<br>
 Unlike&nbsp;<a href="#-atan">atan</a>(y/x),&nbsp;the&nbsp;signs&nbsp;of&nbsp;both&nbsp;x&nbsp;and&nbsp;y&nbsp;are&nbsp;considered.</tt></dd></dl>
- <dl><dt><a name="-atanh"><strong>atanh</strong></a>(...)</dt><dd><tt><a href="#-atanh">atanh</a>(x)<br>
+ <dl><dt><a name="-atanh"><strong>atanh</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;inverse&nbsp;hyperbolic&nbsp;tangent&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-ceil"><strong>ceil</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;ceiling&nbsp;of&nbsp;x&nbsp;as&nbsp;an&nbsp;Integral.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;inverse&nbsp;hyperbolic&nbsp;tangent&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-ceil"><strong>ceil</strong></a>(...)</dt><dd><tt><a href="#-ceil">ceil</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;ceiling&nbsp;of&nbsp;x&nbsp;as&nbsp;an&nbsp;Integral.<br>
 This&nbsp;is&nbsp;the&nbsp;smallest&nbsp;integer&nbsp;&gt;=&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-copysign"><strong>copysign</strong></a>(...)</dt><dd><tt><a href="#-copysign">copysign</a>(x,&nbsp;y)<br>
+ <dl><dt><a name="-comb"><strong>comb</strong></a>(n, k, /)</dt><dd><tt>Number&nbsp;of&nbsp;ways&nbsp;to&nbsp;choose&nbsp;k&nbsp;items&nbsp;from&nbsp;n&nbsp;items&nbsp;without&nbsp;repetition&nbsp;and&nbsp;without&nbsp;order.<br>
 &nbsp;<br>
-Return&nbsp;a&nbsp;float&nbsp;with&nbsp;the&nbsp;magnitude&nbsp;(absolute&nbsp;value)&nbsp;of&nbsp;x&nbsp;but&nbsp;the&nbsp;sign&nbsp;<br>
-of&nbsp;y.&nbsp;On&nbsp;platforms&nbsp;that&nbsp;support&nbsp;signed&nbsp;zeros,&nbsp;<a href="#-copysign">copysign</a>(1.0,&nbsp;-0.0)&nbsp;<br>
+Evaluates&nbsp;to&nbsp;n!&nbsp;/&nbsp;(k!&nbsp;*&nbsp;(n&nbsp;-&nbsp;k)!)&nbsp;when&nbsp;k&nbsp;&lt;=&nbsp;n&nbsp;and&nbsp;evaluates<br>
+to&nbsp;zero&nbsp;when&nbsp;k&nbsp;&gt;&nbsp;n.<br>
+&nbsp;<br>
+Also&nbsp;called&nbsp;the&nbsp;binomial&nbsp;coefficient&nbsp;because&nbsp;it&nbsp;is&nbsp;equivalent<br>
+to&nbsp;the&nbsp;coefficient&nbsp;of&nbsp;k-th&nbsp;term&nbsp;in&nbsp;polynomial&nbsp;expansion&nbsp;of&nbsp;the<br>
+expression&nbsp;(1&nbsp;+&nbsp;x)**n.<br>
+&nbsp;<br>
+Raises&nbsp;TypeError&nbsp;if&nbsp;either&nbsp;of&nbsp;the&nbsp;arguments&nbsp;are&nbsp;not&nbsp;integers.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;either&nbsp;of&nbsp;the&nbsp;arguments&nbsp;are&nbsp;negative.</tt></dd></dl>
+ <dl><dt><a name="-copysign"><strong>copysign</strong></a>(x, y, /)</dt><dd><tt>Return&nbsp;a&nbsp;float&nbsp;with&nbsp;the&nbsp;magnitude&nbsp;(absolute&nbsp;value)&nbsp;of&nbsp;x&nbsp;but&nbsp;the&nbsp;sign&nbsp;of&nbsp;y.<br>
+&nbsp;<br>
+On&nbsp;platforms&nbsp;that&nbsp;support&nbsp;signed&nbsp;zeros,&nbsp;<a href="#-copysign">copysign</a>(1.0,&nbsp;-0.0)<br>
 returns&nbsp;-1.0.</tt></dd></dl>
- <dl><dt><a name="-cos"><strong>cos</strong></a>(...)</dt><dd><tt><a href="#-cos">cos</a>(x)<br>
+ <dl><dt><a name="-cos"><strong>cos</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;cosine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+ <dl><dt><a name="-cosh"><strong>cosh</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;hyperbolic&nbsp;cosine&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-degrees"><strong>degrees</strong></a>(x, /)</dt><dd><tt>Convert&nbsp;angle&nbsp;x&nbsp;from&nbsp;radians&nbsp;to&nbsp;degrees.</tt></dd></dl>
+ <dl><dt><a name="-dist"><strong>dist</strong></a>(p, q, /)</dt><dd><tt>Return&nbsp;the&nbsp;Euclidean&nbsp;distance&nbsp;between&nbsp;two&nbsp;points&nbsp;p&nbsp;and&nbsp;q.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;cosine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
- <dl><dt><a name="-cosh"><strong>cosh</strong></a>(...)</dt><dd><tt><a href="#-cosh">cosh</a>(x)<br>
+The&nbsp;points&nbsp;should&nbsp;be&nbsp;specified&nbsp;as&nbsp;sequences&nbsp;(or&nbsp;iterables)&nbsp;of<br>
+coordinates.&nbsp;&nbsp;Both&nbsp;inputs&nbsp;must&nbsp;have&nbsp;the&nbsp;same&nbsp;dimension.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;hyperbolic&nbsp;cosine&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-degrees"><strong>degrees</strong></a>(...)</dt><dd><tt><a href="#-degrees">degrees</a>(x)<br>
+Roughly&nbsp;equivalent&nbsp;to:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-sqrt">sqrt</a>(sum((px&nbsp;-&nbsp;qx)&nbsp;**&nbsp;2.0&nbsp;for&nbsp;px,&nbsp;qx&nbsp;in&nbsp;zip(p,&nbsp;q)))</tt></dd></dl>
+ <dl><dt><a name="-erf"><strong>erf</strong></a>(x, /)</dt><dd><tt>Error&nbsp;function&nbsp;at&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-erfc"><strong>erfc</strong></a>(x, /)</dt><dd><tt>Complementary&nbsp;error&nbsp;function&nbsp;at&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-exp"><strong>exp</strong></a>(x, /)</dt><dd><tt>Return&nbsp;e&nbsp;raised&nbsp;to&nbsp;the&nbsp;power&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-expm1"><strong>expm1</strong></a>(x, /)</dt><dd><tt>Return&nbsp;<a href="#-exp">exp</a>(x)-1.<br>
 &nbsp;<br>
-Convert&nbsp;angle&nbsp;x&nbsp;from&nbsp;radians&nbsp;to&nbsp;degrees.</tt></dd></dl>
- <dl><dt><a name="-erf"><strong>erf</strong></a>(...)</dt><dd><tt><a href="#-erf">erf</a>(x)<br>
-&nbsp;<br>
-Error&nbsp;function&nbsp;at&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-erfc"><strong>erfc</strong></a>(...)</dt><dd><tt><a href="#-erfc">erfc</a>(x)<br>
-&nbsp;<br>
-Complementary&nbsp;error&nbsp;function&nbsp;at&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-exp"><strong>exp</strong></a>(...)</dt><dd><tt><a href="#-exp">exp</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;e&nbsp;raised&nbsp;to&nbsp;the&nbsp;power&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-expm1"><strong>expm1</strong></a>(...)</dt><dd><tt><a href="#-expm1">expm1</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;<a href="#-exp">exp</a>(x)-1.<br>
 This&nbsp;function&nbsp;avoids&nbsp;the&nbsp;loss&nbsp;of&nbsp;precision&nbsp;involved&nbsp;in&nbsp;the&nbsp;direct&nbsp;evaluation&nbsp;of&nbsp;<a href="#-exp">exp</a>(x)-1&nbsp;for&nbsp;small&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-fabs"><strong>fabs</strong></a>(...)</dt><dd><tt><a href="#-fabs">fabs</a>(x)<br>
+ <dl><dt><a name="-fabs"><strong>fabs</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;absolute&nbsp;value&nbsp;of&nbsp;the&nbsp;float&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-factorial"><strong>factorial</strong></a>(x, /)</dt><dd><tt>Find&nbsp;x!.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;absolute&nbsp;value&nbsp;of&nbsp;the&nbsp;float&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-factorial"><strong>factorial</strong></a>(...)</dt><dd><tt><a href="#-factorial">factorial</a>(x)&nbsp;-&gt;&nbsp;Integral<br>
+Raise&nbsp;a&nbsp;ValueError&nbsp;if&nbsp;x&nbsp;is&nbsp;negative&nbsp;or&nbsp;non-integral.</tt></dd></dl>
+ <dl><dt><a name="-floor"><strong>floor</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;floor&nbsp;of&nbsp;x&nbsp;as&nbsp;an&nbsp;Integral.<br>
 &nbsp;<br>
-Find&nbsp;x!.&nbsp;Raise&nbsp;a&nbsp;ValueError&nbsp;if&nbsp;x&nbsp;is&nbsp;negative&nbsp;or&nbsp;non-integral.</tt></dd></dl>
- <dl><dt><a name="-floor"><strong>floor</strong></a>(...)</dt><dd><tt><a href="#-floor">floor</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;floor&nbsp;of&nbsp;x&nbsp;as&nbsp;an&nbsp;Integral.<br>
 This&nbsp;is&nbsp;the&nbsp;largest&nbsp;integer&nbsp;&lt;=&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-fmod"><strong>fmod</strong></a>(...)</dt><dd><tt><a href="#-fmod">fmod</a>(x,&nbsp;y)<br>
+ <dl><dt><a name="-fmod"><strong>fmod</strong></a>(x, y, /)</dt><dd><tt>Return&nbsp;<a href="#-fmod">fmod</a>(x,&nbsp;y),&nbsp;according&nbsp;to&nbsp;platform&nbsp;C.<br>
 &nbsp;<br>
-Return&nbsp;<a href="#-fmod">fmod</a>(x,&nbsp;y),&nbsp;according&nbsp;to&nbsp;platform&nbsp;C.&nbsp;&nbsp;x&nbsp;%&nbsp;y&nbsp;may&nbsp;differ.</tt></dd></dl>
- <dl><dt><a name="-frexp"><strong>frexp</strong></a>(...)</dt><dd><tt><a href="#-frexp">frexp</a>(x)<br>
+x&nbsp;%&nbsp;y&nbsp;may&nbsp;differ.</tt></dd></dl>
+ <dl><dt><a name="-frexp"><strong>frexp</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;mantissa&nbsp;and&nbsp;exponent&nbsp;of&nbsp;x,&nbsp;as&nbsp;pair&nbsp;(m,&nbsp;e).<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;mantissa&nbsp;and&nbsp;exponent&nbsp;of&nbsp;x,&nbsp;as&nbsp;pair&nbsp;(m,&nbsp;e).<br>
 m&nbsp;is&nbsp;a&nbsp;float&nbsp;and&nbsp;e&nbsp;is&nbsp;an&nbsp;int,&nbsp;such&nbsp;that&nbsp;x&nbsp;=&nbsp;m&nbsp;*&nbsp;2.**e.<br>
 If&nbsp;x&nbsp;is&nbsp;0,&nbsp;m&nbsp;and&nbsp;e&nbsp;are&nbsp;both&nbsp;0.&nbsp;&nbsp;Else&nbsp;0.5&nbsp;&lt;=&nbsp;abs(m)&nbsp;&lt;&nbsp;1.0.</tt></dd></dl>
- <dl><dt><a name="-fsum"><strong>fsum</strong></a>(...)</dt><dd><tt><a href="#-fsum">fsum</a>(iterable)<br>
+ <dl><dt><a name="-fsum"><strong>fsum</strong></a>(seq, /)</dt><dd><tt>Return&nbsp;an&nbsp;accurate&nbsp;floating&nbsp;point&nbsp;sum&nbsp;of&nbsp;values&nbsp;in&nbsp;the&nbsp;iterable&nbsp;seq.<br>
 &nbsp;<br>
-Return&nbsp;an&nbsp;accurate&nbsp;floating&nbsp;point&nbsp;sum&nbsp;of&nbsp;values&nbsp;in&nbsp;the&nbsp;iterable.<br>
 Assumes&nbsp;IEEE-754&nbsp;floating&nbsp;point&nbsp;arithmetic.</tt></dd></dl>
- <dl><dt><a name="-gamma"><strong>gamma</strong></a>(...)</dt><dd><tt><a href="#-gamma">gamma</a>(x)<br>
+ <dl><dt><a name="-gamma"><strong>gamma</strong></a>(x, /)</dt><dd><tt>Gamma&nbsp;function&nbsp;at&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-gcd"><strong>gcd</strong></a>(x, y, /)</dt><dd><tt>greatest&nbsp;common&nbsp;divisor&nbsp;of&nbsp;x&nbsp;and&nbsp;y</tt></dd></dl>
+ <dl><dt><a name="-hypot"><strong>hypot</strong></a>(...)</dt><dd><tt><a href="#-hypot">hypot</a>(*coordinates)&nbsp;-&gt;&nbsp;value<br>
 &nbsp;<br>
-Gamma&nbsp;function&nbsp;at&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-gcd"><strong>gcd</strong></a>(...)</dt><dd><tt><a href="#-gcd">gcd</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;int<br>
-greatest&nbsp;common&nbsp;divisor&nbsp;of&nbsp;x&nbsp;and&nbsp;y</tt></dd></dl>
- <dl><dt><a name="-hypot"><strong>hypot</strong></a>(...)</dt><dd><tt><a href="#-hypot">hypot</a>(x,&nbsp;y)<br>
+Multidimensional&nbsp;Euclidean&nbsp;distance&nbsp;from&nbsp;the&nbsp;origin&nbsp;to&nbsp;a&nbsp;point.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;Euclidean&nbsp;distance,&nbsp;<a href="#-sqrt">sqrt</a>(x*x&nbsp;+&nbsp;y*y).</tt></dd></dl>
- <dl><dt><a name="-isclose"><strong>isclose</strong></a>(...)</dt><dd><tt><a href="#-isclose">isclose</a>(a,&nbsp;b,&nbsp;*,&nbsp;rel_tol=1e-09,&nbsp;abs_tol=0.0)&nbsp;-&gt;&nbsp;bool<br>
+Roughly&nbsp;equivalent&nbsp;to:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-sqrt">sqrt</a>(sum(x**2&nbsp;for&nbsp;x&nbsp;in&nbsp;coordinates))<br>
 &nbsp;<br>
-Determine&nbsp;whether&nbsp;two&nbsp;floating&nbsp;point&nbsp;numbers&nbsp;are&nbsp;close&nbsp;in&nbsp;value.<br>
+For&nbsp;a&nbsp;two&nbsp;dimensional&nbsp;point&nbsp;(x,&nbsp;y),&nbsp;gives&nbsp;the&nbsp;hypotenuse<br>
+using&nbsp;the&nbsp;Pythagorean&nbsp;theorem:&nbsp;&nbsp;<a href="#-sqrt">sqrt</a>(x*x&nbsp;+&nbsp;y*y).<br>
 &nbsp;<br>
-&nbsp;&nbsp;&nbsp;rel_tol<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;difference&nbsp;for&nbsp;being&nbsp;considered&nbsp;"close",&nbsp;relative&nbsp;to&nbsp;the<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;magnitude&nbsp;of&nbsp;the&nbsp;input&nbsp;values<br>
-&nbsp;&nbsp;&nbsp;&nbsp;abs_tol<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;difference&nbsp;for&nbsp;being&nbsp;considered&nbsp;"close",&nbsp;regardless&nbsp;of&nbsp;the<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;magnitude&nbsp;of&nbsp;the&nbsp;input&nbsp;values<br>
+For&nbsp;example,&nbsp;the&nbsp;hypotenuse&nbsp;of&nbsp;a&nbsp;3/4/5&nbsp;right&nbsp;triangle&nbsp;is:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="#-hypot">hypot</a>(3.0,&nbsp;4.0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5.0</tt></dd></dl>
+ <dl><dt><a name="-isclose"><strong>isclose</strong></a>(a, b, *, rel_tol=1e-09, abs_tol=0.0)</dt><dd><tt>Determine&nbsp;whether&nbsp;two&nbsp;floating&nbsp;point&nbsp;numbers&nbsp;are&nbsp;close&nbsp;in&nbsp;value.<br>
+&nbsp;<br>
+&nbsp;&nbsp;rel_tol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;difference&nbsp;for&nbsp;being&nbsp;considered&nbsp;"close",&nbsp;relative&nbsp;to&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;magnitude&nbsp;of&nbsp;the&nbsp;input&nbsp;values<br>
+&nbsp;&nbsp;abs_tol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;difference&nbsp;for&nbsp;being&nbsp;considered&nbsp;"close",&nbsp;regardless&nbsp;of&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;magnitude&nbsp;of&nbsp;the&nbsp;input&nbsp;values<br>
 &nbsp;<br>
 Return&nbsp;True&nbsp;if&nbsp;a&nbsp;is&nbsp;close&nbsp;in&nbsp;value&nbsp;to&nbsp;b,&nbsp;and&nbsp;False&nbsp;otherwise.<br>
 &nbsp;<br>
@@ -120,63 +111,58 @@ must&nbsp;be&nbsp;smaller&nbsp;than&nbsp;at&nbsp;least&nbsp;one&nbsp;of&nbsp;the
 -inf,&nbsp;inf&nbsp;and&nbsp;NaN&nbsp;behave&nbsp;similarly&nbsp;to&nbsp;the&nbsp;IEEE&nbsp;754&nbsp;Standard.&nbsp;&nbsp;That<br>
 is,&nbsp;NaN&nbsp;is&nbsp;not&nbsp;close&nbsp;to&nbsp;anything,&nbsp;even&nbsp;itself.&nbsp;&nbsp;inf&nbsp;and&nbsp;-inf&nbsp;are<br>
 only&nbsp;close&nbsp;to&nbsp;themselves.</tt></dd></dl>
- <dl><dt><a name="-isfinite"><strong>isfinite</strong></a>(...)</dt><dd><tt><a href="#-isfinite">isfinite</a>(x)&nbsp;-&gt;&nbsp;bool<br>
+ <dl><dt><a name="-isfinite"><strong>isfinite</strong></a>(x, /)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;x&nbsp;is&nbsp;neither&nbsp;an&nbsp;infinity&nbsp;nor&nbsp;a&nbsp;NaN,&nbsp;and&nbsp;False&nbsp;otherwise.</tt></dd></dl>
+ <dl><dt><a name="-isinf"><strong>isinf</strong></a>(x, /)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;x&nbsp;is&nbsp;a&nbsp;positive&nbsp;or&nbsp;negative&nbsp;infinity,&nbsp;and&nbsp;False&nbsp;otherwise.</tt></dd></dl>
+ <dl><dt><a name="-isnan"><strong>isnan</strong></a>(x, /)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;x&nbsp;is&nbsp;a&nbsp;NaN&nbsp;(not&nbsp;a&nbsp;number),&nbsp;and&nbsp;False&nbsp;otherwise.</tt></dd></dl>
+ <dl><dt><a name="-isqrt"><strong>isqrt</strong></a>(n, /)</dt><dd><tt>Return&nbsp;the&nbsp;integer&nbsp;part&nbsp;of&nbsp;the&nbsp;square&nbsp;root&nbsp;of&nbsp;the&nbsp;input.</tt></dd></dl>
+ <dl><dt><a name="-ldexp"><strong>ldexp</strong></a>(x, i, /)</dt><dd><tt>Return&nbsp;x&nbsp;*&nbsp;(2**i).<br>
 &nbsp;<br>
-Return&nbsp;True&nbsp;if&nbsp;x&nbsp;is&nbsp;neither&nbsp;an&nbsp;infinity&nbsp;nor&nbsp;a&nbsp;NaN,&nbsp;and&nbsp;False&nbsp;otherwise.</tt></dd></dl>
- <dl><dt><a name="-isinf"><strong>isinf</strong></a>(...)</dt><dd><tt><a href="#-isinf">isinf</a>(x)&nbsp;-&gt;&nbsp;bool<br>
-&nbsp;<br>
-Return&nbsp;True&nbsp;if&nbsp;x&nbsp;is&nbsp;a&nbsp;positive&nbsp;or&nbsp;negative&nbsp;infinity,&nbsp;and&nbsp;False&nbsp;otherwise.</tt></dd></dl>
- <dl><dt><a name="-isnan"><strong>isnan</strong></a>(...)</dt><dd><tt><a href="#-isnan">isnan</a>(x)&nbsp;-&gt;&nbsp;bool<br>
-&nbsp;<br>
-Return&nbsp;True&nbsp;if&nbsp;x&nbsp;is&nbsp;a&nbsp;NaN&nbsp;(not&nbsp;a&nbsp;number),&nbsp;and&nbsp;False&nbsp;otherwise.</tt></dd></dl>
- <dl><dt><a name="-ldexp"><strong>ldexp</strong></a>(...)</dt><dd><tt><a href="#-ldexp">ldexp</a>(x,&nbsp;i)<br>
-&nbsp;<br>
-Return&nbsp;x&nbsp;*&nbsp;(2**i).</tt></dd></dl>
- <dl><dt><a name="-lgamma"><strong>lgamma</strong></a>(...)</dt><dd><tt><a href="#-lgamma">lgamma</a>(x)<br>
-&nbsp;<br>
-Natural&nbsp;logarithm&nbsp;of&nbsp;absolute&nbsp;value&nbsp;of&nbsp;Gamma&nbsp;function&nbsp;at&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-log"><strong>log</strong></a>(...)</dt><dd><tt><a href="#-log">log</a>(x[,&nbsp;base])<br>
-&nbsp;<br>
+This&nbsp;is&nbsp;essentially&nbsp;the&nbsp;inverse&nbsp;of&nbsp;<a href="#-frexp">frexp</a>().</tt></dd></dl>
+ <dl><dt><a name="-lgamma"><strong>lgamma</strong></a>(x, /)</dt><dd><tt>Natural&nbsp;logarithm&nbsp;of&nbsp;absolute&nbsp;value&nbsp;of&nbsp;Gamma&nbsp;function&nbsp;at&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-log"><strong>log</strong></a>(...)</dt><dd><tt><a href="#-log">log</a>(x,&nbsp;[base=math.e])<br>
 Return&nbsp;the&nbsp;logarithm&nbsp;of&nbsp;x&nbsp;to&nbsp;the&nbsp;given&nbsp;base.<br>
+&nbsp;<br>
 If&nbsp;the&nbsp;base&nbsp;not&nbsp;specified,&nbsp;returns&nbsp;the&nbsp;natural&nbsp;logarithm&nbsp;(base&nbsp;e)&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-log10"><strong>log10</strong></a>(...)</dt><dd><tt><a href="#-log10">log10</a>(x)<br>
+ <dl><dt><a name="-log10"><strong>log10</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;base&nbsp;10&nbsp;logarithm&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-log1p"><strong>log1p</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;natural&nbsp;logarithm&nbsp;of&nbsp;1+x&nbsp;(base&nbsp;e).<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;base&nbsp;10&nbsp;logarithm&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-log1p"><strong>log1p</strong></a>(...)</dt><dd><tt><a href="#-log1p">log1p</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;natural&nbsp;logarithm&nbsp;of&nbsp;1+x&nbsp;(base&nbsp;e).<br>
 The&nbsp;result&nbsp;is&nbsp;computed&nbsp;in&nbsp;a&nbsp;way&nbsp;which&nbsp;is&nbsp;accurate&nbsp;for&nbsp;x&nbsp;near&nbsp;zero.</tt></dd></dl>
- <dl><dt><a name="-log2"><strong>log2</strong></a>(...)</dt><dd><tt><a href="#-log2">log2</a>(x)<br>
+ <dl><dt><a name="-log2"><strong>log2</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;base&nbsp;2&nbsp;logarithm&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-modf"><strong>modf</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;fractional&nbsp;and&nbsp;integer&nbsp;parts&nbsp;of&nbsp;x.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;base&nbsp;2&nbsp;logarithm&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-modf"><strong>modf</strong></a>(...)</dt><dd><tt><a href="#-modf">modf</a>(x)<br>
+Both&nbsp;results&nbsp;carry&nbsp;the&nbsp;sign&nbsp;of&nbsp;x&nbsp;and&nbsp;are&nbsp;floats.</tt></dd></dl>
+ <dl><dt><a name="-perm"><strong>perm</strong></a>(n, k=None, /)</dt><dd><tt>Number&nbsp;of&nbsp;ways&nbsp;to&nbsp;choose&nbsp;k&nbsp;items&nbsp;from&nbsp;n&nbsp;items&nbsp;without&nbsp;repetition&nbsp;and&nbsp;with&nbsp;order.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;fractional&nbsp;and&nbsp;integer&nbsp;parts&nbsp;of&nbsp;x.&nbsp;&nbsp;Both&nbsp;results&nbsp;carry&nbsp;the&nbsp;sign<br>
-of&nbsp;x&nbsp;and&nbsp;are&nbsp;floats.</tt></dd></dl>
- <dl><dt><a name="-pow"><strong>pow</strong></a>(...)</dt><dd><tt><a href="#-pow">pow</a>(x,&nbsp;y)<br>
+Evaluates&nbsp;to&nbsp;n!&nbsp;/&nbsp;(n&nbsp;-&nbsp;k)!&nbsp;when&nbsp;k&nbsp;&lt;=&nbsp;n&nbsp;and&nbsp;evaluates<br>
+to&nbsp;zero&nbsp;when&nbsp;k&nbsp;&gt;&nbsp;n.<br>
 &nbsp;<br>
-Return&nbsp;x**y&nbsp;(x&nbsp;to&nbsp;the&nbsp;power&nbsp;of&nbsp;y).</tt></dd></dl>
- <dl><dt><a name="-radians"><strong>radians</strong></a>(...)</dt><dd><tt><a href="#-radians">radians</a>(x)<br>
+If&nbsp;k&nbsp;is&nbsp;not&nbsp;specified&nbsp;or&nbsp;is&nbsp;None,&nbsp;then&nbsp;k&nbsp;defaults&nbsp;to&nbsp;n<br>
+and&nbsp;the&nbsp;function&nbsp;returns&nbsp;n!.<br>
 &nbsp;<br>
-Convert&nbsp;angle&nbsp;x&nbsp;from&nbsp;degrees&nbsp;to&nbsp;radians.</tt></dd></dl>
- <dl><dt><a name="-sin"><strong>sin</strong></a>(...)</dt><dd><tt><a href="#-sin">sin</a>(x)<br>
+Raises&nbsp;TypeError&nbsp;if&nbsp;either&nbsp;of&nbsp;the&nbsp;arguments&nbsp;are&nbsp;not&nbsp;integers.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;either&nbsp;of&nbsp;the&nbsp;arguments&nbsp;are&nbsp;negative.</tt></dd></dl>
+ <dl><dt><a name="-pow"><strong>pow</strong></a>(x, y, /)</dt><dd><tt>Return&nbsp;x**y&nbsp;(x&nbsp;to&nbsp;the&nbsp;power&nbsp;of&nbsp;y).</tt></dd></dl>
+ <dl><dt><a name="-prod"><strong>prod</strong></a>(iterable, /, *, start=1)</dt><dd><tt>Calculate&nbsp;the&nbsp;product&nbsp;of&nbsp;all&nbsp;the&nbsp;elements&nbsp;in&nbsp;the&nbsp;input&nbsp;iterable.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;sine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
- <dl><dt><a name="-sinh"><strong>sinh</strong></a>(...)</dt><dd><tt><a href="#-sinh">sinh</a>(x)<br>
+The&nbsp;default&nbsp;start&nbsp;value&nbsp;for&nbsp;the&nbsp;product&nbsp;is&nbsp;1.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;hyperbolic&nbsp;sine&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-sqrt"><strong>sqrt</strong></a>(...)</dt><dd><tt><a href="#-sqrt">sqrt</a>(x)<br>
+When&nbsp;the&nbsp;iterable&nbsp;is&nbsp;empty,&nbsp;return&nbsp;the&nbsp;start&nbsp;value.&nbsp;&nbsp;This&nbsp;function&nbsp;is<br>
+intended&nbsp;specifically&nbsp;for&nbsp;use&nbsp;with&nbsp;numeric&nbsp;values&nbsp;and&nbsp;may&nbsp;reject<br>
+non-numeric&nbsp;types.</tt></dd></dl>
+ <dl><dt><a name="-radians"><strong>radians</strong></a>(x, /)</dt><dd><tt>Convert&nbsp;angle&nbsp;x&nbsp;from&nbsp;degrees&nbsp;to&nbsp;radians.</tt></dd></dl>
+ <dl><dt><a name="-remainder"><strong>remainder</strong></a>(x, y, /)</dt><dd><tt>Difference&nbsp;between&nbsp;x&nbsp;and&nbsp;the&nbsp;closest&nbsp;integer&nbsp;multiple&nbsp;of&nbsp;y.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;square&nbsp;root&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-tan"><strong>tan</strong></a>(...)</dt><dd><tt><a href="#-tan">tan</a>(x)<br>
+Return&nbsp;x&nbsp;-&nbsp;n*y&nbsp;where&nbsp;n*y&nbsp;is&nbsp;the&nbsp;closest&nbsp;integer&nbsp;multiple&nbsp;of&nbsp;y.<br>
+In&nbsp;the&nbsp;case&nbsp;where&nbsp;x&nbsp;is&nbsp;exactly&nbsp;halfway&nbsp;between&nbsp;two&nbsp;multiples&nbsp;of<br>
+y,&nbsp;the&nbsp;nearest&nbsp;even&nbsp;value&nbsp;of&nbsp;n&nbsp;is&nbsp;used.&nbsp;The&nbsp;result&nbsp;is&nbsp;always&nbsp;exact.</tt></dd></dl>
+ <dl><dt><a name="-sin"><strong>sin</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;sine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+ <dl><dt><a name="-sinh"><strong>sinh</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;hyperbolic&nbsp;sine&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-sqrt"><strong>sqrt</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;square&nbsp;root&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-tan"><strong>tan</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;tangent&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+ <dl><dt><a name="-tanh"><strong>tanh</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;hyperbolic&nbsp;tangent&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-trunc"><strong>trunc</strong></a>(x, /)</dt><dd><tt>Truncates&nbsp;the&nbsp;Real&nbsp;x&nbsp;to&nbsp;the&nbsp;nearest&nbsp;Integral&nbsp;toward&nbsp;0.<br>
 &nbsp;<br>
-Return&nbsp;the&nbsp;tangent&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
- <dl><dt><a name="-tanh"><strong>tanh</strong></a>(...)</dt><dd><tt><a href="#-tanh">tanh</a>(x)<br>
-&nbsp;<br>
-Return&nbsp;the&nbsp;hyperbolic&nbsp;tangent&nbsp;of&nbsp;x.</tt></dd></dl>
- <dl><dt><a name="-trunc"><strong>trunc</strong></a>(...)</dt><dd><tt><a href="#-trunc">trunc</a>(x:Real)&nbsp;-&gt;&nbsp;Integral<br>
-&nbsp;<br>
-Truncates&nbsp;x&nbsp;to&nbsp;the&nbsp;nearest&nbsp;Integral&nbsp;toward&nbsp;0.&nbsp;Uses&nbsp;the&nbsp;__trunc__&nbsp;magic&nbsp;method.</tt></dd></dl>
+Uses&nbsp;the&nbsp;__trunc__&nbsp;magic&nbsp;method.</tt></dd></dl>
 </td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#55aa55">
