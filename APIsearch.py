@@ -20,7 +20,7 @@ def search(pattern, cql_enable=True, board=None, year_from=None, year_to=None, n
         Limit search to dates before `yyyy-12-31`, where yyyy equals `year_from`, by default None
     number : int, optional
         Number of results to return, by default 20.
-        If None, returns all matching results in from the corpus (BECAREFUL, this place a heavy load
+        If None, returns all matching results found in the corpus (BECAREFUL, this place a heavy load
         on the BlackLab server if there is a large number of matching results).
     wordsaroundhit : int, optional
         The number of tokens around the keywords to return, by default 0
